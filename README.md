@@ -34,3 +34,22 @@ Building
 
    $ west flash.
 
+
+Tweaking the Kconfig
+
+For the example here, we are tweaking CONFIG_PRINTK.  This symbol by default
+is always enabled, and we want to disable it via project Kconfig without 
+editing the code.  The main code has a printk statement.
+
+Following the steps in the link:
+https://interrupt.memfault.com/blog/practical_zephyr_kconfig
+
+We go to menuconfig.
+
+    $ west build -t menuconfig
+    
+"Subsystems and OS Services"->"Debugging Options", we find PRINTK to be one
+of the enabled configs, and we find that another config is y-selecting it,
+that is why CONFIG_PRINTK=n at prj.conf is not taking effect.
+
+Disable CONFIG_BOOT_BANNER then CONFIG_PRINTK then rebuild.

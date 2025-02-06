@@ -27,7 +27,7 @@ Building
 3. Build - compile and link.  For this case, I used the stm32f4-disco board
    and consequently its devicetree.
    
-   $ west build -b stm32f4_disco .
+   $ west build -b nucleo_f446ze .
 
 
 4. Flash to your board

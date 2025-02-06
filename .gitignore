@@ -1,0 +1,9 @@
+build/
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+*.o
+*.elf
+*.bin
+*.map
+

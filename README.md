@@ -85,3 +85,8 @@ no binding for it exist yet.
 Binding is done via a yaml file, listed with the int and string properties,
 along with the required "compatible" string.  After including this, int
 and string now appear in devicetree_generated.h
+
+Build with the following:
+
+ $ west build -b nucleo_f446ze . \
+   -DEXTRA_DTC_OVERLAY_FILE=dts/playground/props-basics.overlay

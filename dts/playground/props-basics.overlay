@@ -1,7 +1,13 @@
 / {
-    node_with_props {
-      compatible = "custom,props-basics";
+    label_with_props: node_with_props {
+      compatible = "custom-props-basics";
+      existent-boolean;
       int = <1>;
-      string = "foo";
+      array = <1 second_value: 2 3>;
+      uint8-array = [12 34];
+      string = string_value: "foo bar baz";
+      string-array = "foo", "bar", "baz";
+      enum-int = <200>;
+      enum-string = "whatever";
     };
 };

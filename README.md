@@ -90,3 +90,13 @@ Build with the following:
 
  $ west build -b nucleo_f446ze . \
    -DEXTRA_DTC_OVERLAY_FILE=dts/playground/props-basics.overlay
+   
+   
+More Advanced Binding
+
+Build this with:
+
+ $ west build -b nucleo_f446ze . \
+   -DEXTRA_DTC_OVERLAY_FILE=dts/playground/props-basics.overlay
+
+and observe the effect on devicetree_generated.h.

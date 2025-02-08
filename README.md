@@ -72,3 +72,16 @@ Number 4 is very useful with <gpios> property.
 
 To explore, uncomment each node entry.  Only 1 node must be active at any
 time!
+
+
+Basic DTS Binding
+
+Using the overlay dts/playground/props-basics.overlay without compatible
+property yet (similar to previous example), we can create a DTS node 
+"node_with_props" in zephyr.dts, but in devicetree_generated.h it has no
+generic properties that we declared along it in the overlay.  Because
+no binding for it exist yet.
+
+Binding is done via a yaml file, listed with the int and string properties,
+along with the required "compatible" string.  After including this, int
+and string now appear in devicetree_generated.h

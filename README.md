@@ -53,3 +53,22 @@ of the enabled configs, and we find that another config is y-selecting it,
 that is why CONFIG_PRINTK=n at prj.conf is not taking effect.
 
 Disable CONFIG_BOOT_BANNER then CONFIG_PRINTK then rebuild.
+
+
+Zephyr Device Tree Basics
+
+Added an overlay file for exploring DTS in Zephyr.  It has some differences
+from Linux - one is that there is no dtb!  The device tree objects are in 
+a file called devicetree_generated.h which will be accessed in app file.
+
+File entries
+
+1. phandle concept - what it is, how to see it.
+2. when a node has no phandle.
+3. phandles - array of phandle(s) i.e. 32-bit numbers
+4. phandle-array - phandles with metadata
+
+Number 4 is very useful with <gpios> property.
+
+To explore, uncomment each node entry.  Only 1 node must be active at any
+time!
